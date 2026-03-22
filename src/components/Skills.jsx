@@ -81,7 +81,7 @@ const Skills = () => {
                            <Laptop size={16} />
                            <span>Technical arsenal</span>
                         </div>
-                        <h2 className="text-5xl md:text-8xl font-black text-white leading-none tracking-tight underline decoration-charcoal-800 underline-offset-[1.5rem]">Arsenal <br /> <span className="text-charcoal-500 italic">& Tools.</span></h2>
+                        <h2 className="text-4xl md:text-5xl lg:text-8xl font-black text-white leading-none tracking-tight underline decoration-charcoal-800 underline-offset-[1rem] md:underline-offset-[1.5rem]">Arsenal <br /> <span className="text-charcoal-500 italic">& Tools.</span></h2>
                     </motion.div>
                 </div>
 
@@ -93,14 +93,14 @@ const Skills = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className={`${cat.span} p-10 bg-charcoal-900 border border-charcoal-800 rounded-[3rem] hover:border-primary-500/30 transition-all duration-500 group relative overflow-hidden`}
+                            className={`${cat.span} p-6 md:p-8 lg:p-10 bg-charcoal-900 border border-charcoal-800 rounded-3xl md:rounded-[3rem] hover:border-primary-500/30 transition-all duration-500 group relative overflow-hidden`}
                         >
                             <div className="relative z-10">
                                 <div className="flex items-center gap-4 mb-8">
-                                    <div className="p-4 bg-charcoal-800 text-primary-500 rounded-2xl group-hover:scale-110 transition-transform">
+                                    <div className="p-3 md:p-4 bg-charcoal-800 text-primary-500 rounded-xl md:rounded-2xl group-hover:scale-110 transition-transform flex-shrink-0">
                                         {cat.icon}
                                     </div>
-                                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">{cat.title}</h3>
+                                    <h3 className="text-lg md:text-2xl font-black text-white uppercase tracking-tight break-all md:break-words">{cat.title}</h3>
                                 </div>
                                 <div className="flex flex-wrap gap-4">
                                     {cat.skills.map(skill => (
@@ -109,7 +109,7 @@ const Skills = () => {
                                             href={skillLinks[skill] || "#"} 
                                             target="_blank" 
                                             rel="noopener noreferrer"
-                                            className="group/skill flex items-center gap-3 px-5 py-3 bg-charcoal-950 border border-charcoal-800 rounded-2xl text-charcoal-400 font-bold text-sm hover:border-primary-500 hover:text-white transition-all cursor-pointer shadow-lg hover:shadow-primary-500/10"
+                                            className="group/skill flex items-center gap-2 md:gap-3 px-3 py-2 md:px-5 md:py-3 bg-charcoal-950 border border-charcoal-800 rounded-xl md:rounded-2xl text-charcoal-400 font-bold text-xs md:text-sm hover:border-primary-500 hover:text-white transition-all cursor-pointer shadow-lg hover:shadow-primary-500/10"
                                         >
                                             {skillImages[skill] && (
                                                 <img 

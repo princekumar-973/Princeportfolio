@@ -46,7 +46,7 @@ const Projects = () => {
                            <LayoutPanelLeft size={16} />
                            <span>Craft & logic</span>
                         </div>
-                        <h2 className="text-5xl md:text-8xl font-black text-white leading-none tracking-tight">Recent <br /> <span className="text-charcoal-500 italic">Arena.</span></h2>
+                        <h2 className="text-4xl md:text-5xl lg:text-8xl font-black text-white leading-none tracking-tight">Recent <br /> <span className="text-charcoal-500 italic">Arena.</span></h2>
                     </motion.div>
                 </div>
 
@@ -58,7 +58,7 @@ const Projects = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="group flex flex-col bg-charcoal-900 border border-charcoal-800 rounded-[3rem] overflow-hidden hover:border-primary-500/50 transition-all duration-500"
+                            className="group flex flex-col bg-charcoal-900 border border-charcoal-800 rounded-3xl md:rounded-[3rem] overflow-hidden hover:border-primary-500/50 transition-all duration-500"
                         >
                             <div className="aspect-[16/10] overflow-hidden relative">
                                 <img src={project.image} alt={project.title} className="w-full h-full object-cover grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-110 transition-all duration-1000" />
@@ -66,7 +66,7 @@ const Projects = () => {
                                     <ExternalLink size={20} className="text-white" />
                                 </div>
                             </div>
-                            <div className="p-10 flex flex-col flex-1">
+                            <div className="p-6 md:p-8 lg:p-10 flex flex-col flex-1">
                                 <div className="flex items-center justify-between mb-6">
                                     <div className="flex flex-wrap gap-2">
                                         {project.tags.map(tag => (

@@ -12,7 +12,15 @@ const Contact = () => {
         setResult("Transmitting Signal...");
         
         const formData = new FormData(event.target);
-        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+        const accessKey = "f37ce2e7-6eb1-401b-8109-be9a682b5184"; // REPLACE THIS WITH YOUR KEY FROM WEB3FORMS.COM
+        
+        if (accessKey === "YOUR_ACCESS_KEY_HERE") {
+            setStatus("error");
+            setResult("Mission Briefing Required: Please Add Your Web3Forms Access Key.");
+            return;
+        }
+
+        formData.append("access_key", accessKey);
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
@@ -48,11 +56,11 @@ const Contact = () => {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="lg:col-span-12 p-6 md:p-10 bg-primary-500 rounded-3xl text-black relative group overflow-hidden"
+                        className="lg:col-span-12 p-6 md:p-8 lg:p-10 bg-primary-500 rounded-3xl text-black relative group overflow-hidden"
                     >
                         <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                             <div className="max-w-xl">
-                                <h2 className="text-3xl md:text-5xl font-black leading-tight tracking-tight mb-2 uppercase">Ready to <br /> initiate?</h2>
+                                <h2 className="text-2xl md:text-3xl lg:text-5xl font-black leading-tight tracking-tight mb-2 uppercase">Ready to <br /> initiate?</h2>
                                 <p className="text-sm md:text-base font-bold uppercase tracking-wider opacity-80 italic">
                                     Available for technical consulting & engineering solutions.
                                 </p>
@@ -104,10 +112,10 @@ const Contact = () => {
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="lg:col-span-7 p-6 md:p-10 bg-charcoal-900 border border-charcoal-800 rounded-3xl flex flex-col justify-center"
+                        className="lg:col-span-7 p-6 md:p-8 lg:p-10 bg-charcoal-900 border border-charcoal-800 rounded-3xl flex flex-col justify-center relative z-10 pointer-events-auto"
                     >
                         <form onSubmit={onSubmit} className="space-y-4">
-                            <h3 className="text-3xl md:text-4xl font-black text-white italic tracking-tighter mb-2">Mission Control.</h3>
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-white italic tracking-tighter mb-2">Mission Control.</h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <input name="name" type="text" placeholder="Identity" required className="bg-charcoal-950/50 border border-charcoal-800 p-4 rounded-xl text-white text-sm outline-none focus:border-primary-500 transition-all w-full" />
                                 <input name="email" type="email" placeholder="Signal Origin (Email)" required className="bg-charcoal-950/50 border border-charcoal-800 p-4 rounded-xl text-white text-sm outline-none focus:border-primary-500 transition-all w-full" />

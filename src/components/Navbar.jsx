@@ -15,17 +15,17 @@ const Navbar = ({ navLinks }) => {
     return (
         <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? 'py-4' : 'py-6'}`}>
             <div className="max-w-7xl mx-auto px-6">
-                <div className={`bg-charcoal-900/60 backdrop-blur-xl border border-charcoal-800 rounded-3xl px-6 h-16 flex items-center justify-between transition-all ${scrolled ? 'shadow-2xl' : ''}`}>
+                <div className={`border border-transparent rounded-3xl h-16 flex items-center justify-between transition-all ${!scrolled ? 'lg:bg-charcoal-900/60 lg:backdrop-blur-xl lg:border-charcoal-800 lg:px-6' : ''}`}>
                     <motion.div 
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="flex items-center gap-2 cursor-pointer group"
+                        className={`${scrolled ? 'hidden' : 'hidden lg:flex'} items-center gap-2 cursor-pointer group`}
                     >
                         <span className="text-white font-bold tracking-tight text-xl">Prince<span className="text-primary-500">.</span></span>
                     </motion.div>
 
                     {/* Desktop Nav */}
-                    <div className="hidden lg:flex items-center gap-8">
+                    <div className={`${scrolled ? 'hidden' : 'hidden lg:flex'} items-center gap-8`}>
                         {navLinks.map((link) => (
                             <a 
                                 key={link.title} 
@@ -45,7 +45,7 @@ const Navbar = ({ navLinks }) => {
                     </div>
 
                     {/* Mobile Toggle */}
-                    <button className="lg:hidden text-charcoal-400" onClick={() => setIsOpen(!isOpen)}>
+                    <button className={`${!scrolled ? 'lg:hidden' : ''} ml-auto text-charcoal-400 p-2 bg-charcoal-900/80 backdrop-blur-xl border border-charcoal-800 rounded-xl transition-all hover:text-primary-500`} onClick={() => setIsOpen(!isOpen)}>
                         {isOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
                 </div>
@@ -58,7 +58,7 @@ const Navbar = ({ navLinks }) => {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.95 }}
-                        className="lg:hidden fixed top-24 left-6 right-6 bg-charcoal-900/95 backdrop-blur-2xl border border-charcoal-800 rounded-3xl p-8 z-[101] shadow-2xl"
+                        className="fixed top-24 left-6 right-6 lg:right-auto lg:w-96 bg-charcoal-900/95 backdrop-blur-2xl border border-charcoal-800 rounded-3xl p-6 md:p-8 z-[101] shadow-2xl"
                     >
                         <div className="flex flex-col gap-6">
                             {navLinks.map((link) => (

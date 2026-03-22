@@ -55,7 +55,7 @@ const Footer = () => {
                         </div>
 
                         {/* LINKS AREA */}
-                        <div className="md:w-7/12 flex flex-wrap sm:flex-nowrap justify-start md:justify-end gap-10 md:gap-12">
+                        <div className="md:w-7/12 grid grid-cols-2 sm:flex sm:flex-nowrap justify-start md:justify-end gap-6 md:gap-12 w-full">
                             {/* NAVIGATION */}
                             <div className="flex flex-col gap-2.5">
                                 <h3 className="text-white font-black uppercase tracking-widest text-xs mb-3 italic">Navigation</h3>

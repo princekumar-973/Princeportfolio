@@ -13,17 +13,17 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="lg:col-span-8 p-8 md:p-10 bg-charcoal-900/40 border border-charcoal-800 rounded-[3rem] relative overflow-hidden group"
+                className="lg:col-span-8 p-6 md:p-8 lg:p-10 bg-charcoal-900/40 border border-charcoal-800 rounded-3xl md:rounded-[3rem] relative overflow-hidden group"
             >
                 <div className="relative z-10">
                     <div className="flex items-center gap-3 text-primary-500 font-mono text-xs font-bold uppercase tracking-[0.4em] mb-6">
                         <Sparkles size={16} />
                         <span>Core Identity</span>
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-black text-white leading-[1.1] mb-6 tracking-tight">
+                    <h2 className="text-2xl md:text-3xl lg:text-5xl font-black text-white leading-[1.1] mb-4 md:mb-6 tracking-tight">
                         Bridging the gap between <span className="text-charcoal-500">data</span> and <span className="text-primary-500">experience</span>.
                     </h2>
-                    <p className="text-base md:text-lg text-charcoal-400 font-medium leading-relaxed max-w-2xl">
+                    <p className="text-sm md:text-base lg:text-lg text-charcoal-400 font-medium leading-relaxed max-w-2xl">
                         I'm Prince, a software engineer with a surgical focus on building products that matter. I thrive in the middle of complexity, translating abstract requirements into elegant, high-impact architectures.
                     </p>
                 </div>
@@ -34,7 +34,7 @@ const About = () => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="lg:col-span-4 p-8 bg-primary-500 border border-charcoal-900 rounded-[3rem] flex flex-col justify-between shadow-2xl overflow-hidden relative group"
+                className="lg:col-span-4 p-6 md:p-8 bg-primary-500 border border-charcoal-900 rounded-3xl md:rounded-[3rem] flex flex-col justify-between shadow-2xl overflow-hidden relative group"
             >
                 <div className="relative z-10 text-black">
                     <Coffee size={40} className="mb-6" />
@@ -59,7 +59,7 @@ const About = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="lg:col-span-4 p-8 bg-charcoal-900/40 border border-charcoal-800 rounded-[3rem] flex items-center gap-5 hover:border-primary-500/50 hover:bg-charcoal-900 transition-all cursor-pointer group shadow-xl"
+                className="lg:col-span-4 p-6 md:p-8 bg-charcoal-900/40 border border-charcoal-800 rounded-3xl md:rounded-[3rem] flex items-center gap-4 md:gap-5 hover:border-primary-500/50 hover:bg-charcoal-900 transition-all cursor-pointer group shadow-xl"
             >
                 <div className="p-4 bg-charcoal-800 text-primary-500 rounded-2xl group-hover:scale-110 group-hover:bg-primary-500 group-hover:text-black transition-all">
                     <MapPin size={28} />
@@ -75,7 +75,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="lg:col-span-8 p-8 bg-charcoal-900/40 border border-charcoal-800 rounded-[3rem] flex flex-col md:flex-row md:items-center justify-between gap-6 overflow-hidden"
+                className="lg:col-span-8 p-6 md:p-8 bg-charcoal-900/40 border border-charcoal-800 rounded-3xl md:rounded-[3rem] flex flex-col md:flex-row md:items-center justify-between gap-6 overflow-hidden"
             >
                 <div className="space-y-4">
                     <h3 className="text-3xl font-bold text-white">Engineering for <span className="text-primary-500">tomorrow</span>.</h3>

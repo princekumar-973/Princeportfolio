@@ -42,7 +42,7 @@ const Education = () => {
                             <GraduationCap size={16} />
                             <span>Roots & growth</span>
                         </div>
-                        <h2 className="text-5xl md:text-8xl font-black text-white leading-none tracking-tight">Academic <br /> <span className="text-charcoal-500 italic">Timeline.</span></h2>
+                        <h2 className="text-4xl md:text-5xl lg:text-8xl font-black text-white leading-none tracking-tight">Academic <br /> <span className="text-charcoal-500 italic">Timeline.</span></h2>
                     </motion.div>
                 </div>
 
