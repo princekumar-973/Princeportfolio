@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, Send, MessageCircle, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { Mail, Linkedin, Github, Phone, Send, MessageCircle, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 
 const Contact = () => {
     const [result, setResult] = useState("");
@@ -39,33 +39,33 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-12 relative overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <section id="contact" className="py-10 relative overflow-hidden">
+            <div className="max-w-5xl mx-auto px-6 lg:px-8">
                 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                     
                     <motion.div 
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="lg:col-span-12 p-10 md:p-14 bg-primary-500 rounded-[3rem] text-black relative group overflow-hidden"
+                        className="lg:col-span-12 p-6 md:p-10 bg-primary-500 rounded-3xl text-black relative group overflow-hidden"
                     >
-                        <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+                        <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                             <div className="max-w-xl">
-                                <h2 className="text-4xl md:text-6xl font-black leading-[0.9] tracking-tight mb-6 uppercase">Ready to <br /> initiate?</h2>
-                                <p className="text-base md:text-lg font-bold uppercase tracking-widest opacity-80 italic">
+                                <h2 className="text-3xl md:text-5xl font-black leading-tight tracking-tight mb-2 uppercase">Ready to <br /> initiate?</h2>
+                                <p className="text-sm md:text-base font-bold uppercase tracking-wider opacity-80 italic">
                                     Available for technical consulting & engineering solutions.
                                 </p>
                             </div>
-                            <form action="mailto:princejnv973@gmail.com" method="get">
-                                <motion.button 
-                                    whileHover={{ scale: 1.05 }}
-                                    type="submit"
-                                    className="px-8 py-5 bg-black text-white font-black text-xl uppercase rounded-2xl shadow-2xl flex items-center gap-4 group/btn"
-                                >
-                                    Get in touch <Send size={24} className="group-hover/btn:rotate-12 transition-transform" />
-                                </motion.button>
-                            </form>
+                            <motion.a 
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=princejnv973@gmail.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ scale: 1.05 }}
+                                className="px-6 py-4 bg-black text-white font-black text-lg md:text-xl uppercase rounded-xl shadow-xl flex items-center gap-3 group/btn w-fit"
+                            >
+                                Get in touch <Send size={20} className="group-hover/btn:rotate-12 transition-transform" />
+                            </motion.a>
                         </div>
                         <MessageCircle className="absolute bottom-[-10%] right-[-5%] size-64 opacity-5 rotate-12" />
                     </motion.div>
@@ -73,9 +73,10 @@ const Contact = () => {
                     {/* Social Links Bento */}
                     <div className="lg:col-span-5 grid grid-cols-1 gap-6">
                         {[
-                            { icon: <Mail />, label: 'Relay', value: 'princejnv973@gmail.com', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=princejnv973@gmail.com' },
-                            { icon: <Linkedin />, label: 'LinkedIn', value: '/in/princekumar973', href: 'https://www.linkedin.com/in/princekumar973/' },
-                            { icon: <Github />, label: 'GitHub', value: '@princekumar-973', href: 'https://github.com/princekumar-973' }
+                            { icon: <Mail />, label: 'Relay', displayValue: 'princejnv973@gmail.com', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=princejnv973@gmail.com' },
+                            { icon: <Phone />, label: 'Comms', displayValue: '+91 9693544559', href: 'tel:+919693544559' },
+                            { icon: <Linkedin />, label: 'LinkedIn', displayValue: 'princekumar973', href: 'https://www.linkedin.com/in/princekumar973/' },
+                            { icon: <Github />, label: 'GitHub', displayValue: 'princekumar-973', href: 'https://github.com/princekumar-973' }
                         ].map((item, idx) => (
                             <motion.a
                                 key={idx}
@@ -86,14 +87,14 @@ const Contact = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="p-10 bg-charcoal-900 border border-charcoal-800 rounded-[3rem] hover:border-primary-500 transition-all flex items-center gap-8 group"
+                                className="p-5 bg-charcoal-900 border border-charcoal-800 rounded-2xl hover:border-primary-500 transition-all flex items-center gap-4 group"
                             >
-                                <div className="p-5 bg-charcoal-800 text-primary-500 rounded-2xl group-hover:scale-110 transition-transform">
-                                    {React.cloneElement(item.icon, { size: 28 })}
+                                <div className="p-3 bg-charcoal-800 text-primary-500 rounded-xl group-hover:scale-110 transition-transform flex-shrink-0">
+                                    {React.cloneElement(item.icon, { size: 20 })}
                                 </div>
-                                <div>
-                                    <p className="text-[10px] font-mono font-bold text-charcoal-500 uppercase tracking-widest">{item.label}</p>
-                                    <p className="text-xl font-bold text-white group-hover:text-primary-500 transition-colors uppercase italic">{item.value.split('/').pop().replace('@','')}</p>
+                                <div className="min-w-0">
+                                    <p className="text-[10px] font-mono font-bold text-charcoal-500 uppercase tracking-widest mb-0.5">{item.label}</p>
+                                    <p className="text-sm md:text-base font-bold text-white group-hover:text-primary-500 transition-colors uppercase truncate">{item.displayValue}</p>
                                 </div>
                             </motion.a>
                         ))}
@@ -103,20 +104,20 @@ const Contact = () => {
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="lg:col-span-7 p-10 md:p-14 bg-charcoal-900 border border-charcoal-800 rounded-[4rem] flex flex-col justify-center"
+                        className="lg:col-span-7 p-6 md:p-10 bg-charcoal-900 border border-charcoal-800 rounded-3xl flex flex-col justify-center"
                     >
-                        <form onSubmit={onSubmit} className="space-y-6">
-                            <h3 className="text-4xl font-black text-white italic tracking-tighter">Mission Control.</h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <input name="name" type="text" placeholder="Identity" required className="bg-charcoal-950/50 border border-charcoal-800 p-5 rounded-2xl text-white outline-none focus:border-primary-500 transition-all" />
-                                <input name="email" type="email" placeholder="Signal Origin (Email)" required className="bg-charcoal-950/50 border border-charcoal-800 p-5 rounded-2xl text-white outline-none focus:border-primary-500 transition-all" />
+                        <form onSubmit={onSubmit} className="space-y-4">
+                            <h3 className="text-3xl md:text-4xl font-black text-white italic tracking-tighter mb-2">Mission Control.</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <input name="name" type="text" placeholder="Identity" required className="bg-charcoal-950/50 border border-charcoal-800 p-4 rounded-xl text-white text-sm outline-none focus:border-primary-500 transition-all w-full" />
+                                <input name="email" type="email" placeholder="Signal Origin (Email)" required className="bg-charcoal-950/50 border border-charcoal-800 p-4 rounded-xl text-white text-sm outline-none focus:border-primary-500 transition-all w-full" />
                             </div>
-                            <textarea name="message" rows="4" placeholder="Briefing Data" required className="w-full bg-charcoal-950/50 border border-charcoal-800 p-5 rounded-2xl text-white outline-none focus:border-primary-500 transition-all resize-none"></textarea>
+                            <textarea name="message" rows="4" placeholder="Briefing Data" required className="w-full bg-charcoal-950/50 border border-charcoal-800 p-4 rounded-xl text-white text-sm outline-none focus:border-primary-500 transition-all resize-none"></textarea>
                             
                             <button 
                                 type="submit"
                                 disabled={status === "sending"}
-                                className={`w-full py-5 font-black text-xl uppercase rounded-2xl transition-all flex items-center justify-center gap-3 ${
+                                className={`w-full py-4 font-black text-lg uppercase rounded-xl transition-all flex items-center justify-center gap-3 ${
                                     status === "sending" ? "bg-charcoal-800 text-charcoal-500 cursor-not-allowed" :
                                     status === "success" ? "bg-primary-500 text-black" :
                                     status === "error" ? "bg-red-500 text-white" :

@@ -49,6 +49,25 @@ const Skills = () => {
         "Linux": "https://www.linux.org/docs/"
     };
 
+    const skillImages = {
+        "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        "Java": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+        "C++": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+        "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+        "SQL": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
+        "Pandas": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg",
+        "Numpy": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg",
+        "Power BI": "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg",
+        "EDA": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kaggle/kaggle-original.svg",
+        "Django": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
+        "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+        "MySQL": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+        "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+        "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+        "Vite": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
+        "Linux": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+    };
+
     return (
         <section id="skills" className="py-12 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -83,16 +102,23 @@ const Skills = () => {
                                     </div>
                                     <h3 className="text-2xl font-black text-white uppercase tracking-tight">{cat.title}</h3>
                                 </div>
-                                <div className="flex flex-wrap gap-3">
+                                <div className="flex flex-wrap gap-4">
                                     {cat.skills.map(skill => (
                                         <a 
                                             key={skill} 
                                             href={skillLinks[skill] || "#"} 
                                             target="_blank" 
                                             rel="noopener noreferrer"
-                                            className="px-5 py-2.5 bg-charcoal-950 border border-charcoal-800 rounded-2xl text-charcoal-400 font-bold text-sm hover:border-primary-500 hover:text-primary-500 transition-all cursor-pointer inline-block"
+                                            className="group/skill flex items-center gap-3 px-5 py-3 bg-charcoal-950 border border-charcoal-800 rounded-2xl text-charcoal-400 font-bold text-sm hover:border-primary-500 hover:text-white transition-all cursor-pointer shadow-lg hover:shadow-primary-500/10"
                                         >
-                                            {skill}
+                                            {skillImages[skill] && (
+                                                <img 
+                                                    src={skillImages[skill]} 
+                                                    alt={skill} 
+                                                    className="w-6 h-6 object-contain group-hover/skill:scale-110 transition-transform duration-300 bg-white/5 rounded-md p-0.5"
+                                                />
+                                            )}
+                                            <span>{skill}</span>
                                         </a>
                                     ))}
                                 </div>

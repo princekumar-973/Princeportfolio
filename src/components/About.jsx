@@ -52,20 +52,23 @@ const About = () => {
             </motion.div>
 
             {/* Side Card 2 */}
-            <motion.div 
+            <motion.a 
+                href="https://earth.google.com/web/search/Lovely+Professional+University,+Punjab,+India"
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="lg:col-span-4 p-8 bg-charcoal-900/40 border border-charcoal-800 rounded-[3rem] flex items-center gap-5"
+                className="lg:col-span-4 p-8 bg-charcoal-900/40 border border-charcoal-800 rounded-[3rem] flex items-center gap-5 hover:border-primary-500/50 hover:bg-charcoal-900 transition-all cursor-pointer group shadow-xl"
             >
-                <div className="p-4 bg-charcoal-800 text-primary-500 rounded-2xl">
+                <div className="p-4 bg-charcoal-800 text-primary-500 rounded-2xl group-hover:scale-110 group-hover:bg-primary-500 group-hover:text-black transition-all">
                     <MapPin size={28} />
                 </div>
                 <div>
-                   <p className="text-charcoal-500 font-mono text-[10px] uppercase mb-1 tracking-widest">Base Of Operations</p>
-                   <p className="text-2xl font-bold text-white italic">India</p>
+                   <p className="text-charcoal-500 font-mono text-[10px] uppercase mb-1 tracking-widest group-hover:text-charcoal-400 transition-colors">Base Of Operations</p>
+                   <p className="text-2xl font-bold text-white italic group-hover:text-primary-500 transition-colors">India</p>
                 </div>
-            </motion.div>
+            </motion.a>
 
             {/* Wide Card bottom */}
             <motion.div 

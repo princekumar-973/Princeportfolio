@@ -49,13 +49,13 @@ const Hero = () => {
                     </a>
                     
                     <div className="flex items-center gap-4 bg-charcoal-900/40 p-2 rounded-2xl border border-charcoal-800">
-                        <a href="https://github.com/princekumar-973" target="_blank" rel="noopener noreferrer" className="p-3 bg-charcoal-800 text-charcoal-300 hover:text-white rounded-xl transition-colors">
+                        <a href="https://github.com/princekumar-973" target="_blank" rel="noopener noreferrer" className="p-3 bg-charcoal-800 border border-transparent text-charcoal-300 hover:text-white hover:bg-white/10 hover:border-white/30 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:-translate-y-1 rounded-xl transition-all duration-300" aria-label="GitHub">
                             <Github size={24} />
                         </a>
-                        <a href="https://www.linkedin.com/in/princekumar973/" target="_blank" rel="noopener noreferrer" className="p-3 bg-charcoal-800 text-charcoal-300 hover:text-white rounded-xl transition-colors">
+                        <a href="https://www.linkedin.com/in/princekumar973/" target="_blank" rel="noopener noreferrer" className="p-3 bg-charcoal-800 border border-transparent text-charcoal-300 hover:text-[#0A66C2] hover:bg-[#0A66C2]/10 hover:border-[#0A66C2]/30 hover:shadow-[0_0_20px_rgba(10,102,194,0.4)] hover:-translate-y-1 rounded-xl transition-all duration-300" aria-label="LinkedIn">
                             <Linkedin size={24} />
                         </a>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=princejnv973@gmail.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-charcoal-800 text-charcoal-300 hover:text-primary-500 rounded-xl transition-colors">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=princejnv973@gmail.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-charcoal-800 border border-transparent text-charcoal-300 hover:text-[#EA4335] hover:bg-[#EA4335]/10 hover:border-[#EA4335]/30 hover:shadow-[0_0_20px_rgba(234,67,53,0.4)] hover:-translate-y-1 rounded-xl transition-all duration-300" aria-label="Email">
                             <Mail size={24} />
                         </a>
                     </div>

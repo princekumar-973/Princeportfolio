@@ -7,22 +7,22 @@ const Education = () => {
         {
             year: "2023 - Present",
             title: "B.Tech in Computer Science",
-            institution: "Lovely Professional University",
+            institution: "Lovely Professional University, Punjab",
             desc: "Focusing on Full-Stack Engineering, Data Structures, and Cloud Architectures.",
             result: "CGPA: 7.23",
             current: true
         },
         {
-            year: "2021 - 2023",
+            year: "2021 - 2022",
             title: "Higher Secondary (12th)",
-            institution: "Jawahar Navodaya Vidyalaya",
+            institution: "Jawahar Navodaya Vidyalaya, Siwan",
             desc: "Specialized in Computer Science and Mathematics.",
             result: "Percentage: 73%"
         },
         {
-            year: "2019 - 2021",
+            year: "2019 - 2020",
             title: "Secondary (10th)",
-            institution: "Jawahar Navodaya Vidyalaya",
+            institution: "Jawahar Navodaya Vidyalaya, Siwan ",
             desc: "Foundation in basic sciences and analytical thinking.",
             result: "Percentage: 77%"
         }
