@@ -4,7 +4,7 @@ import { MapPin, Briefcase, Sparkles, Coffee, ExternalLink } from 'lucide-react'
 
 const About = () => {
   return (
-    <section id="about" className="py-16 relative">
+    <section id="about" className="py-10 relative">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             
@@ -12,6 +12,7 @@ const About = () => {
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 className="lg:col-span-8 p-8 md:p-10 bg-charcoal-900/40 border border-charcoal-800 rounded-[3rem] relative overflow-hidden group"
             >
                 <div className="relative z-10">
@@ -32,6 +33,7 @@ const About = () => {
             <motion.div 
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
                 className="lg:col-span-4 p-8 bg-primary-500 border border-charcoal-900 rounded-[3rem] flex flex-col justify-between shadow-2xl overflow-hidden relative group"
             >
                 <div className="relative z-10 text-black">
@@ -53,6 +55,7 @@ const About = () => {
             <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
                 className="lg:col-span-4 p-8 bg-charcoal-900/40 border border-charcoal-800 rounded-[3rem] flex items-center gap-5"
             >
                 <div className="p-4 bg-charcoal-800 text-primary-500 rounded-2xl">
@@ -68,6 +71,7 @@ const About = () => {
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 className="lg:col-span-8 p-8 bg-charcoal-900/40 border border-charcoal-800 rounded-[3rem] flex flex-col md:flex-row md:items-center justify-between gap-6 overflow-hidden"
             >
                 <div className="space-y-4">

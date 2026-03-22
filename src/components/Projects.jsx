@@ -27,19 +27,20 @@ const Projects = () => {
             category: "Data Science",
             date: "Mar’2025",
             desc: "Performed an in-depth Exploratory Data Analysis (EDA) and statistical testing on the NCHS dataset to study major causes of death across the United States. Delivered insights on mortality trends.",
-            image: "https://images.unsplash.com/photo-1551288049-bbda38a5f85d?auto=format&fit=crop&q=80&w=1000",
+            image: "/death_analysis.png",
             tags: ["NumPy", "Pandas", "Seaborn", "Matplotlib"],
             link: "https://github.com/princekumar-973"
         }
     ];
 
     return (
-        <section id="projects" className="py-24 bg-charcoal-950">
+        <section id="projects" className="py-12 bg-charcoal-950">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
                     >
                         <div className="flex items-center gap-3 text-primary-500 font-mono text-xs font-bold uppercase tracking-[0.5em] mb-8">
                            <LayoutPanelLeft size={16} />
@@ -55,6 +56,7 @@ const Projects = () => {
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                             className="group flex flex-col bg-charcoal-900 border border-charcoal-800 rounded-[3rem] overflow-hidden hover:border-primary-500/50 transition-all duration-500"
                         >

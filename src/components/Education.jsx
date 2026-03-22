@@ -29,12 +29,13 @@ const Education = () => {
     ];
 
     return (
-        <section id="education" className="py-24 relative overflow-hidden">
+        <section id="education" className="py-12 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
                         className="max-w-2xl"
                     >
                         <div className="flex items-center gap-3 text-primary-500 font-mono text-xs font-bold uppercase tracking-[0.5em] mb-8">
@@ -55,6 +56,7 @@ const Education = () => {
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
                                 className="relative flex flex-col md:flex-row gap-10 md:gap-20 pl-12 md:pl-0"
                             >

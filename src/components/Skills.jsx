@@ -30,13 +30,33 @@ const Skills = () => {
         }
     ];
 
+    const skillLinks = {
+        "Python": "https://docs.python.org/3/",
+        "Java": "https://docs.oracle.com/en/java/",
+        "C++": "https://en.cppreference.com/w/",
+        "JavaScript": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        "SQL": "https://www.postgresql.org/docs/",
+        "Pandas": "https://pandas.pydata.org/docs/",
+        "Numpy": "https://numpy.org/doc/",
+        "Power BI": "https://learn.microsoft.com/en-us/power-bi/",
+        "EDA": "https://en.wikipedia.org/wiki/Exploratory_data_analysis",
+        "Django": "https://docs.djangoproject.com/",
+        "PostgreSQL": "https://www.postgresql.org/docs/",
+        "MySQL": "https://dev.mysql.com/doc/",
+        "Git": "https://git-scm.com/doc",
+        "GitHub": "https://docs.github.com/",
+        "Vite": "https://vitejs.dev/guide/",
+        "Linux": "https://www.linux.org/docs/"
+    };
+
     return (
-        <section id="skills" className="py-24 relative overflow-hidden">
+        <section id="skills" className="py-12 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
                     >
                         <div className="flex items-center gap-3 text-primary-500 font-mono text-xs font-bold uppercase tracking-[0.5em] mb-8">
                            <Laptop size={16} />
@@ -52,6 +72,7 @@ const Skills = () => {
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                             className={`${cat.span} p-10 bg-charcoal-900 border border-charcoal-800 rounded-[3rem] hover:border-primary-500/30 transition-all duration-500 group relative overflow-hidden`}
                         >
@@ -64,9 +85,15 @@ const Skills = () => {
                                 </div>
                                 <div className="flex flex-wrap gap-3">
                                     {cat.skills.map(skill => (
-                                        <span key={skill} className="px-5 py-2.5 bg-charcoal-950 border border-charcoal-800 rounded-2xl text-charcoal-400 font-bold text-sm hover:border-primary-500 hover:text-primary-500 transition-all cursor-default">
+                                        <a 
+                                            key={skill} 
+                                            href={skillLinks[skill] || "#"} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="px-5 py-2.5 bg-charcoal-950 border border-charcoal-800 rounded-2xl text-charcoal-400 font-bold text-sm hover:border-primary-500 hover:text-primary-500 transition-all cursor-pointer inline-block"
+                                        >
                                             {skill}
-                                        </span>
+                                        </a>
                                     ))}
                                 </div>
                             </div>

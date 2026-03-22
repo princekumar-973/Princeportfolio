@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, ArrowRight, MousePointer2 } from 'lucide-react';
+import { Github, Linkedin, ArrowRight, Download, Mail } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-[80vh] flex items-center pt-12 overflow-hidden">
+    <section id="hero" className="relative min-h-[80vh] flex items-center pt-4 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
@@ -35,16 +35,28 @@ const Hero = () => {
                     transition={{ delay: 0.6 }}
                     className="flex flex-wrap items-center gap-6"
                 >
-                    <button className="group px-6 py-3 bg-primary-500 text-black font-bold text-base rounded-xl hover:bg-primary-400 transition-all flex items-center gap-2 shadow-[0_0_30px_rgba(245,158,11,0.2)]">
+                    <a href="#projects" className="group px-6 py-3 bg-primary-500 text-black font-bold text-base rounded-xl hover:bg-primary-400 transition-all flex items-center gap-2 shadow-[0_0_30px_rgba(245,158,11,0.2)]">
                         Explore Work <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
-                    </button>
+                    </a>
+
+                    <a
+                        href="/resume.pdf"
+                        download="Prince_Kumar_CV.pdf"
+                        className="group px-6 py-3 bg-charcoal-900/60 border border-charcoal-700 text-charcoal-300 hover:text-white hover:border-primary-500 font-bold text-base rounded-xl transition-all flex items-center gap-2"
+                    >
+                        <Download size={18} className="group-hover:-translate-y-0.5 transition-transform text-primary-500" />
+                        Download CV
+                    </a>
                     
                     <div className="flex items-center gap-4 bg-charcoal-900/40 p-2 rounded-2xl border border-charcoal-800">
-                        <a href="https://github.com/princekumar-973" className="p-3 bg-charcoal-800 text-charcoal-300 hover:text-white rounded-xl transition-colors">
+                        <a href="https://github.com/princekumar-973" target="_blank" rel="noopener noreferrer" className="p-3 bg-charcoal-800 text-charcoal-300 hover:text-white rounded-xl transition-colors">
                             <Github size={24} />
                         </a>
-                        <a href="https://www.linkedin.com/in/princekumar973/" className="p-3 bg-charcoal-800 text-charcoal-300 hover:text-white rounded-xl transition-colors">
+                        <a href="https://www.linkedin.com/in/princekumar973/" target="_blank" rel="noopener noreferrer" className="p-3 bg-charcoal-800 text-charcoal-300 hover:text-white rounded-xl transition-colors">
                             <Linkedin size={24} />
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=princejnv973@gmail.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-charcoal-800 text-charcoal-300 hover:text-primary-500 rounded-xl transition-colors">
+                            <Mail size={24} />
                         </a>
                     </div>
                 </motion.div>

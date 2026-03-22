@@ -35,12 +35,13 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="py-24 relative bg-charcoal-950">
+    <section id="certifications" className="py-12 relative bg-charcoal-950">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
             <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
             >
                 <div className="flex items-center gap-3 text-primary-500 font-mono text-xs font-bold uppercase tracking-[0.5em] mb-8">
                     <CheckCircle2 size={16} />
@@ -56,6 +57,7 @@ const Certifications = () => {
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
               className="group p-10 bg-charcoal-900 border border-charcoal-800 rounded-[3rem] hover:border-primary-500/30 transition-all flex flex-col items-center text-center overflow-hidden relative"
             >
