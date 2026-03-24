@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Briefcase, Sparkles, Coffee, ExternalLink } from 'lucide-react';
+import { MapPin, Briefcase, Sparkles, Coffee, ExternalLink, ArrowUpRight } from 'lucide-react';
 
 const About = () => {
   return (
@@ -29,23 +29,55 @@ const About = () => {
                 </div>
             </motion.div>
 
-            {/* Side Card 1 */}
+            {/* Side Card 1 - Logic & Craft Code Block */}
             <motion.div 
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="lg:col-span-4 p-6 md:p-8 bg-primary-500 border border-charcoal-900 rounded-3xl md:rounded-[3rem] flex flex-col justify-between shadow-2xl overflow-hidden relative group"
+                className="lg:col-span-4 p-6 md:p-8 bg-primary-500 border border-charcoal-900 rounded-3xl md:rounded-[3rem] flex flex-col justify-between shadow-2xl overflow-hidden relative group min-h-[350px]"
             >
                 <div className="relative z-10 text-black">
-                    <Coffee size={40} className="mb-6" />
-                    <h3 className="text-3xl font-black leading-none mb-4 uppercase">Logic <br />& Craft.</h3>
+                    <div className="flex items-center gap-3 mb-6">
+                        <div className="p-2 bg-black/10 rounded-xl">
+                            <Coffee size={24} />
+                        </div>
+                        <h3 className="text-2xl font-black uppercase tracking-tight">Logic & Craft.</h3>
+                    </div>
+                    
+                    {/* IDE-style Code Block */}
+                    <div className="bg-charcoal-950/95 backdrop-blur-sm rounded-2xl p-5 border border-black/10 shadow-2xl font-mono text-[11px] md:text-xs text-charcoal-300 leading-relaxed relative overflow-hidden">
+                        <div className="flex gap-1.5 mb-4">
+                            <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                            <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
+                            <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
+                        </div>
+                        <div className="space-y-1">
+                            <p className="text-primary-500/80 italic mb-2">// Developer philosophy</p>
+                            <p><span className="text-purple-400">if</span> (<span className="text-white">complexProblem</span>) {'{'}</p>
+                            <p className="pl-4">
+                                <span className="text-blue-400">const</span> solution = 
+                                <span className="text-white"> Logic</span>
+                                <span className="text-amber-400">.analyze</span>(data);
+                            </p>
+                            <p className="pl-4">
+                                <span className="text-purple-400">return</span> 
+                                <span className="text-white"> Craft</span>
+                                <span className="text-amber-400">.refine</span>(solution);
+                            </p>
+                            <p className="text-white/80">{'}'}</p>
+                        </div>
+                        
+                        {/* Interactive scanline effect */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent h-20 w-full -translate-y-full group-hover:animate-[scan_3s_linear_infinite]" />
+                    </div>
                 </div>
-                <div className="relative z-10 flex items-center justify-between mt-10">
+                
+                <div className="relative z-10 flex items-center justify-between mt-8">
                     <p className="text-black/80 font-bold uppercase text-[10px] tracking-widest leading-relaxed">
                         Fuelled by deep <br /> curiosity & data.
                     </p>
-                    <div className="p-3 bg-black/10 rounded-xl">
-                        <ExternalLink size={20} className="text-black" />
+                    <div className="p-3 bg-black/10 rounded-xl hover:bg-black/20 transition-all cursor-pointer group/btn">
+                        <ArrowUpRight size={20} className="text-black group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                     </div>
                 </div>
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 blur-3xl -z-0" />

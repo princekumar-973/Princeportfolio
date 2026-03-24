@@ -44,6 +44,7 @@ export default {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'float': 'float 6s ease-in-out infinite',
         'marquee': 'marquee 30s linear infinite',
+        'scan': 'scan 3s linear infinite',
       },
       keyframes: {
         float: {
@@ -60,6 +61,10 @@ export default {
           '50%': { transform: 'translateX(-50%) scale(1)' },
           '75%': { transform: 'translateX(-75%) scale(0.98) skewX(-2deg)' },
           '100%': { transform: 'translateX(-100%) scale(1)' },
+        },
+        scan: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(100%)' },
         }
       }
     },
