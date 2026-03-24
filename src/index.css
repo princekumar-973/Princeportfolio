@@ -3,12 +3,17 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  html, body {
+    @apply overflow-x-hidden w-full;
     scroll-behavior: smooth;
   }
   
   body {
-    @apply transition-colors duration-300;
+    @apply transition-colors duration-300 bg-charcoal-950 text-white antialiased;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .transform-style-3d {
@@ -32,18 +37,6 @@
   --primary: #F59E0B;
 }
 
-@layer base {
-  body {
-    @apply bg-charcoal-950 text-white antialiased;
-  }
-}
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
