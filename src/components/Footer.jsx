@@ -39,16 +39,16 @@ const Footer = () => {
                                 Architecting scalable systems and engineering premium digital experiences at the intersection of AI and full-stack development.
                             </p>
                             <div className="flex items-center gap-4 mt-2">
-                                <a href="https://github.com/princekumar-973" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-charcoal-900 border border-charcoal-800 flex items-center justify-center text-charcoal-400 hover:text-black hover:bg-primary-500 hover:border-primary-500 transition-all shadow-lg aria-label='GitHub'">
+                                <a href="https://github.com/princekumar-973" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-charcoal-900 border border-charcoal-800 flex items-center justify-center text-charcoal-400 hover:text-black hover:bg-primary-500 hover:border-primary-500 transition-all shadow-lg" aria-label="GitHub">
                                     <Github size={18} />
                                 </a>
-                                <a href="https://www.linkedin.com/in/princekumar973/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-charcoal-900 border border-charcoal-800 flex items-center justify-center text-charcoal-400 hover:text-black hover:bg-primary-500 hover:border-primary-500 transition-all shadow-lg aria-label='LinkedIn'">
+                                <a href="https://www.linkedin.com/in/princekumar973/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-charcoal-900 border border-charcoal-800 flex items-center justify-center text-charcoal-400 hover:text-black hover:bg-primary-500 hover:border-primary-500 transition-all shadow-lg" aria-label="LinkedIn">
                                     <Linkedin size={18} />
                                 </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-charcoal-900 border border-charcoal-800 flex items-center justify-center text-charcoal-400 hover:text-black hover:bg-primary-500 hover:border-primary-500 transition-all shadow-lg aria-label='Instagram'">
+                                <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-charcoal-900 border border-charcoal-800 flex items-center justify-center text-charcoal-400 hover:text-black hover:bg-primary-500 hover:border-primary-500 transition-all shadow-lg" aria-label="Instagram">
                                     <Instagram size={18} />
                                 </a>
-                                <a href="mailto:princejnv973@gmail.com" className="w-10 h-10 rounded-full bg-charcoal-900 border border-charcoal-800 flex items-center justify-center text-charcoal-400 hover:text-black hover:bg-primary-500 hover:border-primary-500 transition-all shadow-lg aria-label='Email'">
+                                <a href="mailto:princejnv973@gmail.com" className="w-10 h-10 rounded-full bg-charcoal-900 border border-charcoal-800 flex items-center justify-center text-charcoal-400 hover:text-black hover:bg-primary-500 hover:border-primary-500 transition-all shadow-lg" aria-label="Email">
                                     <Mail size={18} />
                                 </a>
                             </div>

@@ -7,7 +7,7 @@ const Skills = () => {
         {
             title: "Languages",
             icon: <Code />,
-            skills: ["Python", "Java", "C++", "JavaScript", "SQL"],
+            skills: ["Python", "Java", "C", "C++", "JavaScript", "SQL"],
             span: "lg:col-span-7"
         },
         {
@@ -33,6 +33,7 @@ const Skills = () => {
     const skillLinks = {
         "Python": "https://docs.python.org/3/",
         "Java": "https://docs.oracle.com/en/java/",
+        "C": "https://en.cppreference.com/w/c",
         "C++": "https://en.cppreference.com/w/",
         "JavaScript": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         "SQL": "https://www.postgresql.org/docs/",
@@ -52,6 +53,7 @@ const Skills = () => {
     const skillImages = {
         "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
         "Java": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+        "C": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
         "C++": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
         "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
         "SQL": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
